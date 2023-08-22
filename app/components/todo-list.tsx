@@ -1,8 +1,18 @@
+'use client'
+
+import { useTodos } from '../queries'
+import { TodoItem } from './todo-item'
+
 export function TodoList() {
+  const todos = useTodos()
+
   return (
-    <ul className="list-disc">
-      <li>Hello</li>
-      <li>World</li>
+    <ul>
+      {todos.data?.map((todo) => (
+        <li key={todo.id}>
+          <TodoItem todo={todo} />
+        </li>
+      ))}
     </ul>
-  );
+  )
 }
