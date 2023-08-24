@@ -2,8 +2,8 @@ import tw from 'tailwind-styled-components'
 import { Todo } from '../types'
 import { Checkbox } from './ui/checkbox'
 import { HTMLProps } from 'react'
-import { TodoItemDeleteButton } from './todo-item-delete-button'
 import { useClearTodoAction } from '../queries'
+import { TodoItemDeleteButton } from './todo-item-delete-button'
 
 type RootProps = {
   $disabled: boolean
@@ -12,6 +12,7 @@ type RootProps = {
 const Root = tw.div<RootProps>`
   h-[100px] 
   border-b
+  border-gray-300
   flex 
   items-center 
   space-x-4

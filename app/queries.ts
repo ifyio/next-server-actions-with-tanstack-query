@@ -12,6 +12,7 @@ export function useTodos() {
   return useQuery({
     queryKey: ['todos'],
     queryFn: getTodos,
+    suspense: true,
   })
 }
 
